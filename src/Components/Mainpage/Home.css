@@ -1,7 +1,6 @@
 .homeSlide h1 {
     font-size: 45px;
-    /* line-height: 55px;
-    margin: 50px 0 20px 0; */
+   
   }
   .homeSlide p {
     margin: 20px 0;
@@ -43,4 +42,28 @@
   .homeSlide .box .right img{
     width: 100%;
     height: 100%;
+  }
+  .catClose{
+    display: none;
+  }
+  @media (max-width: 768px){
+   
+    .home .container .contentWidth{   
+        width: 90%;
+        margin: 0 auto;
+    }
+    .homeSlide .box {
+      flex-direction: column-reverse;
+    }
+    .homeSlide .box .left{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .homeSlide .box .right{
+      padding-top: 0px;
+      width: 50%;
+    }
+    .homeSlide h1 {
+      font-size: 30px;
+    }
   }

@@ -15,8 +15,13 @@
   .newArrivals .box .img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
   }
   .newArrivals .box img {
     width: auto;
     height: auto;
+    max-width: 100%;
   }  
+  .newArrivals .box h4{
+    margin-top: -20px;
+  }

@@ -179,4 +179,32 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   } 
+@media screen and (max-width: 768px) {
+    .grid2{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
 
+
+@media  screen and (max-width: 600px) {
+    .grid2{ 
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .annouc .container.d_flex{
+      flex-direction: column;
+      flex-basis: 100%;
+    }
+
+.annouc .img{
+      margin-top: 20px;
+      width: 100% !important;
+    }
+}
+@media screen and (max-width: 480px){
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

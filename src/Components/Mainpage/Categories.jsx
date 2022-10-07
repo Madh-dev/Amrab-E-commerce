@@ -1,7 +1,6 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 const Categories = () => {
-
     const data = [
            {
       cateImg: "./Images/categories/cat1.png",
@@ -48,9 +47,28 @@ const Categories = () => {
       cateName: "Books",
     },
     ]
+    const [MobileMenu, setMobileMenu] = useState(false);
+const [width, setWidth] = useState(window.innerWidth);
+useEffect(()=>{
+function handleResize(){
+  setWidth(window.innerWidth);
+}
+window.addEventListener("resize",handleResize);
+return ()=> window.removeEventListener("resize", handleResize);
+},[width]);
+useEffect(()=>{
+  if (width <= 768){
+    setMobileMenu(true)
+  }else{
+    setMobileMenu(false);
+  }
+},[width])
+
+
+
     return (
             <>
-            <div className='category'>
+            <div className= {MobileMenu? 'catClose' : 'category'}>
                 {
                     data.map((value,index)=> {
                         return(

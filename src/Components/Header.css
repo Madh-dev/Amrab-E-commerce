@@ -158,7 +158,7 @@
       z-index: 999;
     }
     .open{
-        top:20%;
+        top:35%;
         right:30px;
     
     }
@@ -177,6 +177,15 @@
 
     .header.active {
       height: 10vh;
+    }
+    .header .container{
+      justify-content: flex-start   !important;
+    }
+    .search.active{
+      height: 18vh;
+    }
+    .search-box span{
+      font-size: 12px;
     }
   }
   

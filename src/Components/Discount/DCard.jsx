@@ -12,7 +12,33 @@ const DCard = () => {
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 1,
-        autoplay: true
+        autoplay: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
       };
   
   return (
@@ -22,7 +48,7 @@ const DCard = () => {
             {Ddata.map((value,index) => {
             
             return(
-                <>
+              
                 <div className='product' key={index}>
                     <div className='box'>
                     <div className='img'>
@@ -32,7 +58,7 @@ const DCard = () => {
                     <h4>{value.name}</h4>
                     <span>{value.price}</span>
                 </div></div>
-                </>
+              
             )
         })}
       </Slider>
