@@ -13,7 +13,7 @@ const Search = ({cartItem}) => {
           <section className='search'>
             <div  className='container c_flex'>
               <div className='logo width'>
-              <img src={logo} alt='' style={{width: '50px'}}/>
+              <Link to="/"><img src={logo} alt='' style={{width: '50px'}}/></Link>
               </div>
               <div className='search-box f_flex'>
                 <i className='fa fa-search'></i>

@@ -101,4 +101,15 @@
     .cart-items .container .cart-details{
             width: 100%;
     }
+    .removeCart button{
+        display: block;
+        margin-left: 200%;
+    }
+    .cart-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .cartControl{
+        margin-top: 5px;
+    }
 }
