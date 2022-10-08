@@ -20,9 +20,9 @@ const Cart = ({ cartItem, addTocart, decreaseQty }) => {
                   </div>
                   <div className='cart-details'>
                     <h3>{item.name}</h3>
-                    <h4>{item.price}.00 * {item.qty}
+                    <h4>{item.price}.00 * {item.qty}</h4>
                       <span>${productQty}.00</span>
-                    </h4>
+                    
                   </div>
                   <div className='cart-items-function'>
                     <div className='removeCart'>

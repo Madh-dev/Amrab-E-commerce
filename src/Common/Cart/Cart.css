@@ -98,4 +98,7 @@
         
         width: max-content;
     }
+    .cart-items .container .cart-details{
+            width: 100%;
+    }
 }
