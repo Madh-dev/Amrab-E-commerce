@@ -90,3 +90,12 @@
     height: 140px;
     font-size: 18px;
 }
+@media screen and (max-width: 600px) {
+    .cart-items .container{
+        flex-direction: column;
+    }
+    .cart-items .container .cart-total{
+        
+        width: max-content;
+    }
+}
