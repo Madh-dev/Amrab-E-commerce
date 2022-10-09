@@ -75,6 +75,7 @@
     border-radius: 5px;
     height: 6vh;
     margin-top: 5px;
+    align-items: center;
   }
   .catgrories span {
     margin-right: 20px;
