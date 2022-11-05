@@ -8,7 +8,7 @@ const SuccessfulPage = () => {
         Successful  
     </h4>
     <p>Thank you for patronizing us.<br /> Give feedback after you receive the goods</p>
-    <Link to='/'> Home</Link>
+    <Link to='/' className="homie"> Home</Link>
 </div>
   )
 }

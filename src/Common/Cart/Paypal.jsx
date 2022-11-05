@@ -1,8 +1,9 @@
 import { PayPalScriptProvider, PayPalButtons,usePayPalScriptReducer } from "@paypal/react-paypal-js";
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
+import SuccessfulPage from "./SuccessfulPage";
 
 const Paypal = (props) => {
-
+    const [success, setSuccess] = useState(false);
 
         // This values are the props in the UI
 const amount = props.totalPrice;
@@ -15,7 +16,7 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
     // usePayPalScriptReducer can be use only inside children of PayPalScriptProviders
     // This is the main reason to wrap the PayPalButtons in a new component
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
-
+ 
     useEffect(() => {
         dispatch({
             type: "resetOptions",
@@ -54,6 +55,9 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
                 onApprove={function (data, actions) {
                     return actions.order.capture().then(function () {
                         // Your code here after capture the order
+                        alert('SUCCESSFUL, Thank you for your purchase');
+                        setSuccess(true);
+                        
                     });
                 }}
             />
@@ -67,7 +71,7 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
 
   return (
     <div style={{ maxWidth: "750px", minHeight: "200px", margin: " 10px auto" }}>
-            <PayPalScriptProvider
+           { success ? ( <SuccessfulPage /> ):( <PayPalScriptProvider
                 options={{
                     "client-id": "test",
                     components: "buttons",
@@ -79,6 +83,9 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
                     showSpinner={true}
                 />
 			</PayPalScriptProvider>
+           )
+
+           } 
 		</div>
   )
 }

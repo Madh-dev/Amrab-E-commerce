@@ -95,12 +95,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 35vh;
-    width: 70vh;
     background: white;
 }
 .successfulPage h4{
     color: green;
+    margin-top: 10%;
     font-size: 5rem;
     font-weight: 800;
 }
@@ -108,6 +107,14 @@
     color: #000000;
     font-size: 3rem;
     font-weight: 600;
+}
+.homie{
+  
+    border-radius: 10px;
+    background: #0f3460;
+    color: #fff;
+    font-size: medium;
+    padding: 8px;
 }
 @media screen and (max-width: 600px) {
     .cart-items .container{
