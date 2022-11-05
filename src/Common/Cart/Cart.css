@@ -90,6 +90,25 @@
     height: 140px;
     font-size: 18px;
 }
+.successfulPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 70vh;
+    background: white;
+}
+.successfulPage h4{
+    color: green;
+    font-size: 5rem;
+    font-weight: 800;
+}
+.successfulPage p{
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 600;
+}
 @media screen and (max-width: 600px) {
     .cart-items .container{
         flex-direction: column;

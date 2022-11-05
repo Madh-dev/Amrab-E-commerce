@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import './App.css';
 import Header from './Components/Header';
 import {
@@ -41,11 +42,16 @@ const decreaseQty = (product) =>{
    
   }
 }
-
+const initialOptions = {
+  "client-id": "AdZAR0-8MSyyxTPEn7tdOYXQjlFacVXp8W7k41CSW3_rnhHhmQYVkM4zJCWmyVDVr5-HvJZ7s8o7DmPf",
+  currency: "USD",
+  intent: "capture",
+};
   return (
     <>
       <Router>
       <Header cartItem = {cartItem } />
+      
       <Switch>
           <Route path='/' exact>
           <Pages productItems={productItems}  addTocart = {addTocart}  shopItems = {shopItems} />
